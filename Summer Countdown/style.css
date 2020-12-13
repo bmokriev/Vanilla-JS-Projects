@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fjalla One', sans-serif;
+    background-image: url('./img/background-palmwind.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    min-width: 250px;
+}
+
+/* overlay */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+body * {
+    z-index: 1;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.countdown {
+    display: flex;
+    transform: scale(1.7);
+}
+
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.time h2 {
+    margin: 0 0 5px;
+}
+
+@media (max-width:500px){
+    h1 {
+        font-size: 40px;
+    }
+
+    .time {
+        margin: 5px;
+    }
+
+    .countdown {
+        transform: scale(1);
+    }
+    .time h1 {
+        margin: 0;
+    }
+
+    
+}
